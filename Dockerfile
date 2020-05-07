@@ -1,5 +1,6 @@
 FROM alpine
 
+WORKDIR /build
 # File Author
 MAINTAINER Shikha Vyas
 
