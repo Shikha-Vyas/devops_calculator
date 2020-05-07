@@ -14,7 +14,7 @@ node {
         sh 'mvn test'
     }
     stage('Build Image') {
-        app = docker.build("ankitpd/calculator")
+        app = docker.build("shikha02/calculator")
       }
     stage('Push image')
       {
