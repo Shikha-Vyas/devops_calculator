@@ -1,8 +1,5 @@
 node {
   def app
-  def registry = "shikha02/spe_calculator"
-  def registryCredential = 'DockerHub'
-  def dockerImage = ''
   //agent any
     stage('Clone Repository') {
         checkout scm
