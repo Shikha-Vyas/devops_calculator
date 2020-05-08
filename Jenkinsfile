@@ -14,7 +14,7 @@ node {
         sh 'mvn test'
     }
     stage('Build Image') {
-         dockerImage = docker.build registry + ":$BUILD_NUMBER"
+         app=docker.build(shikha02/calculator)
       }
     stage('Push image')
       {
