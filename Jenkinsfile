@@ -23,4 +23,16 @@ node {
             //app.push("latest")
         }
       }
+  stage('Deploy on Node')
+    {
+        step([
+            $class: "RundeckNotifier",
+            rundeckInstance: "rundeck",
+            jobId: "7ca91b5b-bfb5-42ee-a625-a1e75de5cbce",
+            includeRundeckLogs: true,
+            shouldWaitForRundeckJob: true,
+            shouldFailTheBuild: true,
+            tailLog: true
+        ])
+    }
 }
