@@ -3,11 +3,11 @@ FROM openjdk:8-jdk-alpine
 # File Author
 MAINTAINER SHIKHA VYAS
 
-EXPOSE 8080
+COPY input_file .
 
 # Copies the files from the source on the host into the container’s set destination
 ADD target/devops_calculator-1.0-SNAPSHOT.jar .
 
 #ENTRYPOINT runs the as the first command when container is created
-ENTRYPOINT ["java", "-jar", "devops_calculator-1.0-SNAPSHOT.jar"]
-CMD ["2"]
+ENTRYPOINT ["java", "-jar", "devops_calculator-1.0-SNAPSHOT.jar < input_file"]
+
