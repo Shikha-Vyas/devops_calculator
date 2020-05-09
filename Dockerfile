@@ -1,9 +1,10 @@
-FROM alpine
+FROM openjdk:8-jdk-alpine
 
 # File Author
-MAINTAINER Shikha Vyas
-WORKDIR /usr/local
-EXPOSE 8080
-# Copies the files from the source on the host into the container’s set destination
-COPY target/devops_calculator-1.0-SNAPSHOT.jar .
+MAINTAINER SHIKHA VYAS
 
+# Copies the files from the source on the host into the container’s set destination
+ADD target/devops_calculator-1.0-SNAPSHOT.jar .
+
+#ENTRYPOINT runs the as the first command when container is created
+ENTRYPOINT ["java", "-jar", "devops_calculator-1.0-SNAPSHOT.jar"]
