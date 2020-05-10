@@ -7,6 +7,6 @@ MAINTAINER SHIKHA VYAS
 COPY ["target/devops_calculator-1.0-SNAPSHOT.jar","input_file","./"]
 
 #ENTRYPOINT runs the as the first command when container is created
-ENTRYPOINT ["java", "-jar", "devops_calculator-1.0-SNAPSHOT.jar"]
-CMD ["1","2","4"]
+CMD ["java", "-jar", "devops_calculator-1.0-SNAPSHOT.jar","<","input_file"]
+
 
